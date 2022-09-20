@@ -1,1 +1,1 @@
-# coolstore-microservice
+# coolstore-RH-demo
