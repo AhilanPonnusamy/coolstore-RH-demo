@@ -163,6 +163,7 @@ angular.module('app')
 
                 $scope.cartTotal = 0.0;
                 $scope.itemCount = 0;
+                $scope.shippingPromoSavings=0.0;
 
                 $scope.isLoggedIn = function () {
                     return $auth.loggedIn;
@@ -188,7 +189,26 @@ angular.module('app')
                 }, function (newValue) {
                     $scope.cartTotal = newValue;
                 });
-
+                $scope.$watch(function () {
+                    return cart.getCart().shippingPromoSavings || 0.0;
+                }, function (newValue) {
+                    $scope.shippingPromoSavings = newValue;
+                });
+                $scope.$watch(function () {
+                    return cart.getCart().cartItemPromoSavings || 0.0;
+                }, function (newValue) {
+                    $scope.cartItemPromoSavings = newValue;
+                });
+                $scope.$watch(function () {
+                    return cart.getCart().cartItemTotal || 0.0;
+                }, function (newValue) {
+                    $scope.cartItemTotal = newValue;
+                });
+                $scope.$watch(function () {
+                    return cart.getCart().shippingTotal || 0.0;
+                }, function (newValue) {
+                    $scope.shippingTotal = newValue;
+                });
                 $scope.$watch(function () {
                     var totalItems = 0;
                     cart.getCart().shoppingCartItemList.forEach(function (el) {
