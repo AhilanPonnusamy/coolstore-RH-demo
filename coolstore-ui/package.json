@@ -24,6 +24,7 @@
     "node": ">=0.10.10"
   },
   "scripts": {
-    "postinstall": "bower install matchHeight && node_modules/.bin/bower --config.registry.search=${BOWER_MIRROR} install && npm i keycloak-js && mkdir -p bower_components/keycloak && cp -r node_modules/keycloak-js/* bower_components/keycloak/ && cp -rf bower_components/matchHeight/dist/* bower_components/matchHeight/"
+    "postinstall": "bower install matchHeight && node_modules/.bin/bower --config.registry.search=${BOWER_MIRROR} install && npm i keycloak-js && mkdir -p bower_components/keycloak && cp -r node_modules/keycloak-js/* bower_components/keycloak/ && cp -rf bower_components/matchHeight/dist/* bower_components/matchHeight/",
+    "test": "jest"
   }
 }
