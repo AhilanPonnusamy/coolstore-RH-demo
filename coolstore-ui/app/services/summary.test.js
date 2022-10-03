@@ -43,7 +43,7 @@ describe('Test summary catalog function', function(){
   
   it('Total Order Amount label should be displayed in Shopping Summary:', function(){
     var strActual = _summaryservice.checkTotalOrderLabelMatch();
-    expect(strActual).toEqual("Total Order Amount");
+    expect(strActual).toEqual("Total Order Amount:");//the colon is an error introduced for demo purpose, the actual label that is compared should be without the colon 
   });
 */
 });
