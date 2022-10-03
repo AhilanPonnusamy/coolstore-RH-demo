@@ -30,7 +30,7 @@ describe('Test summary catalog function', function(){
     var actual = _summaryservice.addTwoNumbers(50,80);
     expect(actual).toEqual(130);
   });
-
+/*
   it('Shipping label should be displayed in Shopping Summary:', function(){
     var strActual = _summaryservice.checkShippingLabelMatch();
     expect(strActual).toEqual("Shipping");
@@ -45,5 +45,5 @@ describe('Test summary catalog function', function(){
     var strActual = _summaryservice.checkTotalOrderLabelMatch();
     expect(strActual).toEqual("Total Order Amount");
   });
-
+*/
 });
